@@ -1,10 +1,21 @@
 const en = require('./dictionaries/dictionaries/en.json');
+const toAppend = require('./appendedWords.json');
 const maps = require('./maps');
+
+const enPronunciations = {
+    ...en,
+    ...toAppend
+};
 
 const diffAvoid = 2;
 
 function pronounce(word) {
-    return en[word.toLowerCase()];
+    let pronunciation = enPronunciations[word.toLowerCase()];
+    if (!pronunciation) {
+        console.error(`no pronunciation found for word ${word}`);
+        return [word];
+    }
+    return pronunciation;
 }
 
 function sentence(sentence) {
