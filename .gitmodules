@@ -1,0 +1,3 @@
+[submodule "lang/dictionaries"]
+	path = lang/dictionaries
+	url = https://github.com/DanielSWolf/wiki-pronunciation-dict.git
