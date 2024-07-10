@@ -2,6 +2,7 @@ const compounds = {
     'ɑ ɹ': '𐑸',
     'ɔ ɹ': '𐑹',
     'ɛ ə ɹ': '𐑺',
+    'ɛ ɹ': '𐑺',
     'ɜ ɹ': '𐑻',
     'ə ɹ': '𐑼',
     'i ə ɹ': '𐑽',
@@ -74,7 +75,211 @@ const proToShaw = {
     ...compounds
 };
 
-const shawTogroup = {
+const lmh = {
+    0: 'low',
+    1: 'mid',
+    2: 'high'
+};
+
+const groups = {
+    0: 'smooth',
+    1: 'rough',
+    2: 'buzzer'
+};
+
+const shawToGroup = {
+    𐑐: {
+        group: 1,
+        pattern: '2'
+    },
+    𐑚: {
+        group: 1,
+        pattern: '0'
+    },
+    𐑑: {
+        group: 2,
+        pattern: '2'
+    },
+    𐑛: {
+        group: 2,
+        pattern: '0'
+    },
+    𐑒: {
+        group: 2,
+        pattern: '01'
+    },
+    𐑜: {
+        group: 2,
+        pattern: '10'
+    },
+    𐑓: {
+        group: 1,
+        pattern: '01'
+    },
+    𐑝: {
+        group: 1,
+        pattern: '10'
+    },
+    𐑔: {
+        group: 1,
+        pattern: '21'
+    },
+    𐑞: {
+        group: 1,
+        pattern: '12'
+    },
+    𐑕: {
+        group: 0,
+        pattern: '20'
+    },
+    𐑟: {
+        group: 0,
+        pattern: '02'
+    },
+    𐑖: {
+        group: 0,
+        pattern: '01'
+    },
+    𐑠: {
+        group: 0,
+        pattern: '10'
+    },
+    𐑗: {
+        group: 1,
+        pattern: '02'
+    },
+    𐑡: {
+        group: 1,
+        pattern: '20'
+    },
+    𐑘: {
+        group: 0,
+        pattern: '210'
+    },
+    𐑢: {
+        group: 0,
+        pattern: '012'
+    },
+    𐑙: {
+        group: 2,
+        pattern: '202'
+    },
+    𐑣: {
+        group: 2,
+        pattern: '020'
+    },
+    𐑤: {
+        group: 0,
+        pattern: '21'
+    },
+    𐑮: {
+        group: 0,
+        pattern: '12'
+    },
+    𐑥: {
+        group: 1,
+        pattern: '121'
+    },
+    𐑯: {
+        group: 1,
+        pattern: '101'
+    },
+    𐑦: {
+        group: 0,
+        pattern: '0'
+    },
+    𐑰: {
+        group: 0,
+        pattern: '2'
+    },
+    𐑧: {
+        group: 0,
+        pattern: '010'
+    },
+    𐑱: {
+        group: 0,
+        pattern: '020'
+    },
+    𐑨: {
+        group: 0,
+        pattern: '101'
+    },
+    𐑲: {
+        group: 0,
+        pattern: '202'
+    },
+    𐑩: {
+        group: 0,
+        pattern: '121'
+    },
+    𐑳: {
+        group: 0,
+        pattern: '121'
+    },
+    𐑪: {
+        group: 0,
+        pattern: '212'
+    },
+    𐑴: {
+        group: 2,
+        pattern: '010'
+    },
+    𐑫: {
+        group: 2,
+        pattern: '20'
+    },
+    𐑵: {
+        group: 2,
+        pattern: '02'
+    },
+    𐑬: {
+        group: 2,
+        pattern: '121'
+    },
+    𐑶: {
+        group: 2,
+        pattern: '101'
+    },
+    𐑭: {
+        group: 2,
+        pattern: '021'
+    },
+    𐑷: {
+        group: 2,
+        pattern: '021'
+    },
+    𐑸: {
+        group: 1,
+        pattern: '202'
+    },
+    𐑹: {
+        group: 1,
+        pattern: '012'
+    },
+    𐑺: {
+        group: 1,
+        pattern: '210'
+    },
+    𐑻: {
+        group: 1,
+        pattern: '021'
+    },
+    𐑼: {
+        group: 1,
+        pattern: '102'
+    },
+    𐑽: {
+        group: 1,
+        pattern: '201'
+    },
+    𐑾: {
+        group: 2,
+        pattern: '21'
+    },
+    𐑿: {
+        group: 0,
+        pattern: '120'
+    }
 };
 
 module.exports = {
@@ -82,5 +287,8 @@ module.exports = {
     dbls,
     sngls,
     proToShaw,
-    fixedWords
+    fixedWords,
+    shawToGroup,
+    lmh,
+    groups
 };
