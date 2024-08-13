@@ -1,6 +1,3 @@
 [submodule "lang/dictionaries"]
 	path = lang/dictionaries
 	url = https://github.com/DanielSWolf/wiki-pronunciation-dict.git
-[submodule "strudel/convert"]
-	path = strudel/convert
-	url = https://github.com/charlesrobsampson/en-to-shaw.git
