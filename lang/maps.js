@@ -84,7 +84,12 @@ const lmh = {
 const groups = {
     0: 'smooth',
     1: 'rough',
-    2: 'buzzer'
+    2: 'buzzer',
+    3: 'jazz',
+    4: 'bass3',
+    5: 'blip',
+    6: 'stab',
+    7: 'off',
 };
 
 const shawToGroup = {
@@ -106,27 +111,27 @@ const shawToGroup = {
     },
     𐑒: {
         group: 2,
-        pattern: '01'
+        pattern: '012'
     },
     𐑜: {
         group: 2,
-        pattern: '10'
+        pattern: '210'
     },
     𐑓: {
-        group: 1,
-        pattern: '01'
+        group: 0,
+        pattern: '102'
     },
     𐑝: {
-        group: 1,
-        pattern: '10'
+        group: 0,
+        pattern: '201'
     },
     𐑔: {
-        group: 1,
-        pattern: '21'
+        group: 2,
+        pattern: '102'
     },
     𐑞: {
-        group: 1,
-        pattern: '12'
+        group: 2,
+        pattern: '201'
     },
     𐑕: {
         group: 0,
@@ -137,12 +142,12 @@ const shawToGroup = {
         pattern: '02'
     },
     𐑖: {
-        group: 0,
-        pattern: '01'
+        group: 1,
+        pattern: '120'
     },
     𐑠: {
-        group: 0,
-        pattern: '10'
+        group: 2,
+        pattern: '120'
     },
     𐑗: {
         group: 1,
@@ -170,19 +175,19 @@ const shawToGroup = {
     },
     𐑤: {
         group: 0,
-        pattern: '21'
+        pattern: '021'
     },
     𐑮: {
-        group: 0,
-        pattern: '12'
+        group: 2,
+        pattern: '021'
     },
     𐑥: {
-        group: 1,
-        pattern: '121'
+        group: 3,
+        pattern: '5'
     },
     𐑯: {
-        group: 1,
-        pattern: '101'
+        group: 3,
+        pattern: '5 5 5'
     },
     𐑦: {
         group: 0,
@@ -193,36 +198,36 @@ const shawToGroup = {
         pattern: '2'
     },
     𐑧: {
-        group: 0,
-        pattern: '010'
+        group: 4,
+        pattern: '8'
     },
     𐑱: {
         group: 0,
         pattern: '020'
     },
     𐑨: {
-        group: 0,
-        pattern: '101'
+        group: 4,
+        pattern: '8 8 8'
     },
     𐑲: {
         group: 0,
         pattern: '202'
     },
     𐑩: {
-        group: 0,
-        pattern: '121'
+        group: 5,
+        pattern: '1 1'
     },
     𐑳: {
-        group: 0,
-        pattern: '121'
+        group: 5,
+        pattern: '1 1'
     },
     𐑪: {
-        group: 0,
-        pattern: '212'
+        group: 5,
+        pattern: '0 0'
     },
     𐑴: {
-        group: 2,
-        pattern: '010'
+        group: 6,
+        pattern: '10'
     },
     𐑫: {
         group: 2,
@@ -233,20 +238,20 @@ const shawToGroup = {
         pattern: '02'
     },
     𐑬: {
-        group: 2,
-        pattern: '121'
+        group: 6,
+        pattern: '9'
     },
     𐑶: {
-        group: 2,
-        pattern: '101'
+        group: 6,
+        pattern: '6'
     },
     𐑭: {
-        group: 2,
-        pattern: '021'
+        group: 5,
+        pattern: '0 0'
     },
     𐑷: {
-        group: 2,
-        pattern: '021'
+        group: 5,
+        pattern: '0 0'
     },
     𐑸: {
         group: 1,
@@ -273,8 +278,8 @@ const shawToGroup = {
         pattern: '201'
     },
     𐑾: {
-        group: 2,
-        pattern: '21'
+        group: 7,
+        pattern: '0'
     },
     𐑿: {
         group: 0,
