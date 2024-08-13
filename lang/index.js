@@ -223,9 +223,9 @@ function forTidal(sound, soundLen = 0.1, repeat = false) {
 }
 
 function enToJson(txt) {
-    const shaw = convert.toShawSentence(txt, true, true);
-    const sound = convert.shawToSound(shaw);
-    return convert.soundJson(convert.toShawSentence(txt, true), sound, .1);
+    const shaw = toShawSentence(txt, true, true);
+    const sound = shawToSound(shaw);
+    return soundJson(toShawSentence(txt, true), sound, .1);
 }
 
 module.exports = {
