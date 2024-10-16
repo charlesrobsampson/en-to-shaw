@@ -66,7 +66,8 @@ const fixedWords = {
     the: '𐑞',
     to: '𐑑',
     and: '𐑯',
-    you: '𐑿'
+    you: '𐑿',
+    of: '𐑝',
 };
 
 const proToShaw = {
@@ -78,18 +79,15 @@ const proToShaw = {
 const lmh = {
     0: 'low',
     1: 'mid',
-    2: 'high'
+    2: 'high',
+    3: 'top',
 };
 
 const groups = {
     0: 'smooth',
     1: 'rough',
     2: 'buzzer',
-    3: 'jazz',
-    4: 'bass3',
-    5: 'blip',
-    6: 'stab',
-    7: 'off',
+    3: 'blip',
 };
 
 const shawToGroup = {
@@ -111,83 +109,83 @@ const shawToGroup = {
     },
     𐑒: {
         group: 2,
-        pattern: '012'
+        pattern: '0 1 2'
     },
     𐑜: {
         group: 2,
-        pattern: '210'
+        pattern: '2 1 0'
     },
     𐑓: {
         group: 0,
-        pattern: '102'
+        pattern: '1 0 2'
     },
     𐑝: {
         group: 0,
-        pattern: '201'
+        pattern: '2 0 1'
     },
     𐑔: {
         group: 2,
-        pattern: '102'
+        pattern: '1 0 2'
     },
     𐑞: {
         group: 2,
-        pattern: '201'
+        pattern: '2 0 1'
     },
     𐑕: {
         group: 0,
-        pattern: '20'
+        pattern: '2 0'
     },
     𐑟: {
         group: 0,
-        pattern: '02'
+        pattern: '0 2'
     },
     𐑖: {
         group: 1,
-        pattern: '120'
+        pattern: '1 2 0'
     },
     𐑠: {
         group: 2,
-        pattern: '120'
+        pattern: '1 2 0'
     },
     𐑗: {
         group: 1,
-        pattern: '02'
+        pattern: '0 2'
     },
     𐑡: {
         group: 1,
-        pattern: '20'
+        pattern: '2 0'
     },
     𐑘: {
         group: 0,
-        pattern: '210'
+        pattern: '2 1 0'
     },
     𐑢: {
         group: 0,
-        pattern: '012'
+        pattern: '0 1 2'
     },
     𐑙: {
         group: 2,
-        pattern: '202'
+        pattern: '2 0 2'
     },
     𐑣: {
         group: 2,
-        pattern: '020'
+        pattern: '0 2 0'
     },
     𐑤: {
         group: 0,
-        pattern: '021'
+        pattern: '0 2 1'
     },
     𐑮: {
         group: 2,
-        pattern: '021'
+        pattern: '0 2 1'
     },
     𐑥: {
-        group: 3,
-        pattern: '5'
+        group: 0,
+        pattern: '0 1'
     },
     𐑯: {
-        group: 3,
-        pattern: '5 5 5'
+        group: 0,
+        pattern: '1 0'
     },
     𐑦: {
         group: 0,
@@ -198,92 +196,92 @@ const shawToGroup = {
         pattern: '2'
     },
     𐑧: {
-        group: 4,
-        pattern: '8'
+        group: 0,
+        pattern: '2 3'
     },
     𐑱: {
         group: 0,
-        pattern: '020'
+        pattern: '0 2 0'
     },
     𐑨: {
-        group: 4,
-        pattern: '8 8 8'
+        group: 0,
+        pattern: '3 2'
     },
     𐑲: {
         group: 0,
-        pattern: '202'
+        pattern: '2 0 2'
     },
     𐑩: {
-        group: 5,
+        group: 3,
         pattern: '1 1'
     },
     𐑳: {
-        group: 5,
+        group: 3,
         pattern: '1 1'
     },
     𐑪: {
-        group: 5,
+        group: 3,
         pattern: '0 0'
     },
     𐑴: {
-        group: 6,
-        pattern: '10'
+        group: 1,
+        pattern: '1 0'
     },
     𐑫: {
         group: 2,
-        pattern: '20'
+        pattern: '2 0'
     },
     𐑵: {
         group: 2,
-        pattern: '02'
+        pattern: '0 2'
     },
     𐑬: {
-        group: 6,
-        pattern: '9'
+        group: 2,
+        pattern: '1 0'
     },
     𐑶: {
-        group: 6,
-        pattern: '6'
+        group: 2,
+        pattern: '0 1'
     },
     𐑭: {
-        group: 5,
+        group: 3,
         pattern: '0 0'
     },
     𐑷: {
-        group: 5,
+        group: 3,
         pattern: '0 0'
     },
     𐑸: {
         group: 1,
-        pattern: '202'
+        pattern: '2 0 2'
     },
     𐑹: {
         group: 1,
-        pattern: '012'
+        pattern: '0 1 2'
     },
     𐑺: {
         group: 1,
-        pattern: '210'
+        pattern: '2 1 0'
     },
     𐑻: {
         group: 1,
-        pattern: '021'
+        pattern: '0 2 1'
     },
     𐑼: {
         group: 1,
-        pattern: '102'
+        pattern: '1 0 2'
     },
     𐑽: {
         group: 1,
-        pattern: '201'
+        pattern: '2 0 1'
     },
     𐑾: {
-        group: 7,
-        pattern: '0'
+        group: 1,
+        pattern: '3 2'
     },
     𐑿: {
         group: 0,
-        pattern: '120'
+        pattern: '1 2 0'
     }
 };
 

@@ -25,7 +25,7 @@ function sentence(sentence) {
 function toShaw(word, useCompounds = false, useJoiner = false) {
     const joiner = useJoiner ? '*-*': '';
     if (maps.fixedWords[word]) {
-        return maps.fixedWords[word];
+        return maps.fixedWords[word] + joiner;
     }
     let shaw = '';
     let p = pronounce(word);
@@ -151,9 +151,17 @@ function shawToSound(shaw) {
             }
         },
         2: () => '12',
+        3: () => {
+            const r = Math.random();
+            if (r < 0.5) {
+                return '19';
+            } else {
+                return '20';
+            }
+        },
     };
     const space = '~';
-    const sound = [[],[],[],[],[],[],[],[]];
+    const sound = [[],[],[],[]];
     shaw.split('*-*').forEach(s => {
         if (s === ' ') {
             sound.forEach(s => s.push(space));
@@ -163,16 +171,16 @@ function shawToSound(shaw) {
             sound.forEach(s => s.push(space));
             sound.forEach(s => s.push(space));
         } else {
-            const g = maps.shawToGroup[s];
+            let g = maps.shawToGroup[s];
             let pattern = '~';
             if (!g) {
                 console.error(`no group found for ${s}`);
                 return;
             }
             if (g.group > 2) {
-                pattern = `[${g.pattern}]`;
+                pattern = `[${g.pattern.split(' ').map(p => `${maps.groups[g.group]}:${p}`).join(' ')}]`;
             } else {
-                pattern = `[${g.pattern.split('').map(p => {
+                pattern = `[${g.pattern.split(' ').map(p => {
                     // console.log({p});
                     return n[p]();
                 }).join(' ')}]`;
@@ -205,7 +213,7 @@ function soundJson(shaw, sound, soundLen = 0.1, startRests = 1, endRests = 1) {
     return output;
 }
 
-function forTidal(sound, soundLen = 0.1, repeat = false) {
+function forTidal(sound, soundLen = 0.1, repeat = true) {
     const totalSounds = sound[0].length;
     let output = 'do\n';
     output += `  setcps(5)\n  resetCycles\n`;
