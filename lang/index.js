@@ -1,6 +1,7 @@
 const en = require('./dictionaries/dictionaries/en.json');
 const toAppend = require('./appendedWords.json');
-const maps = require('./maps');
+// const maps = require('./maps');
+const maps = require('./maps.json');
 
 const enPronunciations = {
     ...en,
